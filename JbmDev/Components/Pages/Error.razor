@@ -1,0 +1,25 @@
+﻿@page "/Error"
+@using System.Diagnostics
+
+<PageTitle>Erreur</PageTitle>
+
+<h1 class="text-danger">Erreur.</h1>
+<h2 class="text-danger">Une erreur est survenue. Veuillez recharger la page. Si l'erreur persiste merci de me contacter.</h2>
+
+@if (ShowRequestId)
+{
+    <p>
+        <strong>Request ID:</strong> <code>@RequestId</code>
+    </p>
+}
+
+@code {
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
+
+    public string? RequestId { get; set; }
+    public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+
+    protected override void OnInitialized() =>
+        RequestId = Activity.Current?.Id ?? HttpContext?.TraceIdentifier;
+}

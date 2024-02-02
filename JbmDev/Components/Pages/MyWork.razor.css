@@ -1,0 +1,35 @@
+﻿article {
+    display: flex;
+    flex-direction: column;
+}
+
+    article > ::deep a {
+        margin-top: 1rem;
+        align-self: center;
+    }
+
+    article > p {
+        margin-block-end: 0;
+        text-indent: 50px;
+    }
+
+::deep .btn-contact > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btn-contact svg {
+    color: var(--md-sys-color-primary);
+    margin-right: 0.5rem;
+}
+
+.btn-contact p {
+    color: var(--md-sys-color-primary);
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 0 5vw;
+    }
+}
