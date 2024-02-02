@@ -1,8 +1,0 @@
-<md-outlined-text-field @attributes="@CapturedAttributes">@ChildContent</md-outlined-text-field>
-
-@code{
-	[Parameter(CaptureUnmatchedValues = true)]
-	public IDictionary<string, object>? CapturedAttributes { get; set; }
-	[Parameter]
-	public RenderFragment? ChildContent { get; set; }
-}

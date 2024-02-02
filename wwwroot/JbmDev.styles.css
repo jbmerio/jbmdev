@@ -1,0 +1,697 @@
+/* _content/JbmDev/Components/Layout/Header.razor.rz.scp.css */
+header[b-Header] {
+    display: flex;
+    place-content: space-around;
+}
+
+    header > div[b-Header] {
+        border-radius: var(--catalog-shape-xl);
+        background-color: var(--md-sys-color-primary);
+        padding: var(--catalog-spacing-xl);
+        text-align: center;
+        color: var(--md-sys-color-on-primary);
+    }
+/* _content/JbmDev/Components/Layout/HomeLayout.razor.rz.scp.css */
+html[b-2viuzlagq9],
+body[b-2viuzlagq9] {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow: visible;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+/* _content/JbmDev/Components/Layout/MainLayout.razor.rz.scp.css */
+/* Style du layout */
+#layout[b-MainLayout] {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-MainLayout] {
+    height: calc(100% - 4.8rem);
+    padding: 1.5rem;
+}
+
+    main > .container[b-MainLayout] {
+        height: 100%;
+        border-radius: 1.5rem;
+        overflow: auto;
+    }
+
+@media (min-width: 1025px) {
+    main[b-MainLayout] {
+        height: calc(100% - 3rem);
+        width: 100%;
+    }
+
+    #layout[b-MainLayout] {
+        flex-direction: row;
+    }
+}
+
+/* Style de la page de chargement */
+#loading[b-MainLayout] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: var(--md-sys-color-surface-container-dark);
+    color: var(--md-sys-color-primary-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    #loading.hide[b-MainLayout] {
+        z-index: -9999;
+        opacity: 0;
+        transition-property: opacity, z-index;
+        transition-duration: 0.5s, 0s;
+        transition-delay: 0s, 0.5s;
+        transition-timing-function: ease-in-out, step-end;
+    }
+
+    #loading .loading-text[b-MainLayout] {
+        animation: pulse-b-MainLayout 1s infinite;
+    }
+
+@media screen and (orientation: portrait) {
+    .loading-text[b-MainLayout] {
+        font-size: 15vw;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .loading-text[b-MainLayout] {
+        font-size: 10vh;
+    }
+}
+
+@keyframes pulse-b-MainLayout {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (pointer: fine) {
+    :root[b-MainLayout] {
+        /* firefox */
+        scrollbar-color: var(--md-sys-color-primary) var(--md-sys-color-transparent);
+        scrollbar-width: thin;
+    }
+
+    /* Chromium + Safari */
+    [b-MainLayout]::-webkit-scrollbar {
+        background-color: var(--md-sys-color-transparent);
+        width: 8px;
+        height: 8px;
+    }
+
+    [b-MainLayout]::-webkit-scrollbar-thumb {
+        background-color: var(--md-sys-color-primary);
+        border-radius: calc(8px / 2);
+    }
+}
+
+/* Style du @Body */
+.container[b-MainLayout]  > main {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: var(--md-sys-color-surface-bright);
+    padding: 2rem;
+}
+
+    .container[b-MainLayout]  > main p {
+        font-size: 1.5rem;
+    }
+
+    .container[b-MainLayout]  > main > header {
+        width: 60vw;
+        margin: auto;
+    }
+
+        .container[b-MainLayout]  > main > header h1 {
+            margin: 0;
+            margin-bottom: var(--catalog-spacing-xl);
+            font-size: 5vw;
+        }
+
+        .container[b-MainLayout]  > main > header h4 {
+            margin: 0;
+            font-size: 2.5vw;
+        }
+
+@media(max-width: 1024px) {
+    .container[b-MainLayout]  > main > header {
+        width: auto;
+    }
+
+        .container[b-MainLayout]  > main > header h1 {
+            font-size: 7.5vw;
+        }
+
+        .container[b-MainLayout]  > main > header h4 {
+            font-size: 4vw;
+        }
+}
+
+/* MIN */
+@media(min-width: 769px) {
+    .container[b-MainLayout]  > main > header {
+        width: 60vw;
+        margin: auto;
+    }
+}
+
+/* MAX */
+@media(max-width: 768px) {
+    .container[b-MainLayout]  > main > header h1 {
+        font-size: 10vw;
+    }
+
+    .container[b-MainLayout]  > main > header h4 {
+        font-size: 5vw;
+    }
+}
+
+@media(max-width: 425px) {
+    .container[b-MainLayout]  > main > header h1 {
+        font-size: 12vw;
+    }
+
+    .container[b-MainLayout]  > main > header h4 {
+        font-size: 5vw;
+    }
+}
+
+@media(max-width: 375px) {
+    .container[b-MainLayout]  > main > header h1 {
+        font-size: 12vw;
+    }
+}
+
+@media(max-width: 319px) {
+    .container[b-MainLayout]  > main > header h4 {
+        font-size: 4.6vw;
+    }
+}
+
+/* Style du message d'erreur */
+#blazor-error-ui[b-MainLayout] {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss[b-MainLayout] {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+/* _content/JbmDev/Components/Layout/NavMenu.razor.rz.scp.css */
+.navbar-brand[b-NavMenu] {
+    background-image: url("../ressources/logo.jpg");
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+}
+
+nav[b-NavMenu] {
+    position: inherit;
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    background-color: var(--md-sys-color-surface-dim );
+    padding: 0rem 10px;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+    nav[b-NavMenu] >  md-list {
+        background-color: var(--md-sys-color-transparent);
+        padding: 0;
+    }
+
+        nav[b-NavMenu] >  md-list md-list-item {
+            background-color: var(--md-sys-color-transparent);
+            min-width: 48px;
+        }
+
+            nav[b-NavMenu] >  md-list md-list-item div {
+                display: flex;
+                justify-content: center;
+                font-weight: bold;
+            }
+
+        nav[b-NavMenu] >  md-list > a {
+            text-decoration: none;
+            color: var(--md-sys-color-primary);
+        }
+
+            nav[b-NavMenu] >  md-list > a .text-menu {
+                color: var(--md-sys-color-primary);
+            }
+
+            nav[b-NavMenu] >  md-list > a:hover md-list-item > .menu-icon,
+            nav[b-NavMenu] >  md-list > a.active md-list-item > .menu-icon {
+                background-color: var(--md-sys-color-primary);
+                border-radius: var(--catalog-shape-xl);
+                margin: auto;
+                width: 48px;
+            }
+
+        nav[b-NavMenu] >  md-list a:first-child:hover md-list-item > .menu-icon {
+            margin: initial;
+            width: initial;
+        }
+
+        nav[b-NavMenu] >  md-list > a:hover svg,
+        nav[b-NavMenu] >  md-list > a.active md-list-item svg {
+            color: var(--md-sys-color-on-primary);
+        }
+
+    nav[b-NavMenu] >  md-icon-button {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: 10px;
+        align-self: flex-end;
+    }
+
+        nav[b-NavMenu] >  md-icon-button:hover {
+            border-radius: var(--catalog-shape-xl);
+            background-color: var(--md-sys-color-primary);
+        }
+
+            nav[b-NavMenu] >  md-icon-button:hover svg {
+                color: var(--md-sys-color-on-primary);
+            }
+
+svg[b-NavMenu] {
+    color: var(--md-sys-color-primary);
+}
+
+@media (min-width: 1025px) {
+    nav[b-NavMenu] {
+        grid-auto-flow: row;
+        border-top-right-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        border-bottom-left-radius: 0;
+        padding: 3px;
+    }
+
+        nav[b-NavMenu] >  md-list {
+            flex-direction: column;
+        }
+
+            nav[b-NavMenu] >  md-list md-list-item {
+                padding: 15px 2px;
+            }
+
+            nav[b-NavMenu] >  md-list a div {
+                font-size: 14px;
+            }
+
+                nav[b-NavMenu] >  md-list a div.text-menu {
+                    width: max-content;
+                    margin: auto;
+                }
+
+        nav[b-NavMenu] >  md-icon-button {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            align-self: flex-end;
+        }
+}
+
+@media(max-width: 1024px) {
+    nav[b-NavMenu] {
+        padding: 0;
+    }
+
+        nav[b-NavMenu] >  md-list {
+            display: grid;
+            grid-auto-flow: column;
+        }
+
+            nav[b-NavMenu] >  md-list a:first-child svg {
+                width: 50px;
+                height: 50px;
+            }
+}
+
+@media(max-width: 518px) {
+
+    nav[b-NavMenu] >  md-list svg {
+        width: calc(32px * 0.79);
+    }
+
+    nav[b-NavMenu] >  md-list a div {
+        font-size: 3vw;
+    }
+}
+
+@media(max-width: 320px) {
+    nav[b-NavMenu] >  md-list a div {
+        font-size: 2.8vw;
+    }
+}
+/* _content/JbmDev/Components/Pages/AboutMe.razor.rz.scp.css */
+article[b-AboutMe] {
+    display: flex;
+}
+
+    article > div[b-AboutMe] {
+        margin: auto;
+        padding: 2rem 0.5rem 0 0.5rem;
+    }
+
+        article > div > p[b-AboutMe] {
+            margin: 0;
+            text-align: justify;
+            text-indent: 50px;
+        }
+
+.links[b-AboutMe] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto 0.5rem auto 2rem;
+}
+
+    .links > div[b-AboutMe] {
+        margin: 1rem 0;
+    }
+
+    .links svg[b-AboutMe] {
+        color: var(--md-sys-color-primary);
+    }
+
+    .links md-filled-tonal-button div[b-AboutMe] {
+        padding: 0.5rem;
+    }
+
+    .links[b-AboutMe]  md-filled-tonal-button {
+        height: auto;
+    }
+
+    .links p[b-AboutMe] {
+        margin: auto;
+        font-size: 1.8rem;
+        color: var(--md-sys-color-primary);
+        text-align: center;
+        align-items: center;
+    }
+
+@media (max-width: 768px) {
+    main[b-AboutMe] {
+        padding: 0 5vw;
+    }
+
+    .links[b-AboutMe] {
+    }
+}
+/* _content/JbmDev/Components/Pages/Contact.razor.rz.scp.css */
+article[b-MyWork] {
+    display: flex;
+    flex-direction: column;
+}
+
+    article > div > p[b-MyWork] {
+        text-align: center;
+    }
+
+    article[b-MyWork] >  a {
+        margin: 1rem auto;
+    }
+
+    article[b-MyWork] >  svg {
+        margin-right: 0.5rem;
+    }
+
+    article > p[b-MyWork] {
+        margin-block-end: 0;
+        text-indent: 50px;
+    }
+
+    article > .links[b-MyWork] {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem auto;
+        width: 50%;
+    }
+
+        article > .links div[b-MyWork] {
+            display: flex;
+        }
+
+[b-MyWork] .btn-contact > div {
+    flex-direction: row;
+    align-items: center;
+}
+
+[b-MyWork] svg {
+    color: var(--md-sys-color-primary);
+}
+
+[b-MyWork] p {
+    color: var(--md-sys-color-primary);
+}
+
+@media (max-width: 768px) {
+    main[b-MyWork] {
+        padding: 0 5vw;
+    }
+}
+/* _content/JbmDev/Components/Pages/Home.razor.rz.scp.css */
+@media screen and (orientation: portrait) {
+    body[b-Home] {
+        overflow: auto;
+    }
+
+    #background[b-Home] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    #background[b-Home] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        min-width: 955px;
+        width: calc(100% - 25vw);
+        height: auto;
+        margin: auto;
+    }
+}
+
+#logo[b-Home] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    padding: 10px;
+    width: 10%;
+    height: auto;
+    z-index: 1;
+    border-radius: 20px;
+    background-color: var(--md-sys-color-secondary-container);
+    /* effet d'ombre */
+    transform: scale(1);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 25%);
+    transform-origin: left top;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+    #logo:hover[b-Home] {
+        transform: scale(1.5);
+        transform-origin: left top;
+        box-shadow: 0px 0px 25px 25px rgba(0, 0, 0, 25%);
+        transition: transform 0.5s, box-shadow 0.5s;
+    }
+
+    #logo > *[b-Home] {
+        width: 100%;
+        height: auto;
+    }
+
+#hint[b-Home] {
+    display: none;
+}
+
+.arrow[b-Home] {
+    display: none;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: rgba(23, 26, 43, 25%);
+    /* effet d'ombre */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 75%);
+}
+
+.arrow-left[b-Home] {
+    left: 0;
+}
+
+.arrow-right[b-Home] {
+    right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    /* Suppression du padding sur smartphone */
+    #logo[b-Home] {
+        width: 100px;
+        padding: 5px;
+    }
+
+    #hint[b-Home] {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        max-width: calc(100% - 140px);
+        height: auto;
+        z-index: 1;
+    }
+
+        #hint[b-Home] >  * {
+            background-color: rgba(0, 125, 125, 50%);
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 20px;
+            padding: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 50%);
+        }
+
+    /* On affiche les flèches de navigation sur smartphone */
+    .arrow[b-Home] {
+        display: flex;
+    }
+}
+
+/* Effet de dégradé du #background vers le body */
+[b-Home] > #background {
+    transform: scale(1);
+    transition: transform 0.5s, box-shadow 0.5s;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 25%);
+}
+
+[b-Home] > #developer,
+[b-Home] > #developer > div,
+[b-Home] > #screen1,
+[b-Home] > #screen3 {
+    position: absolute;
+    display: block;
+}
+
+/* Zoom de #background lorsque #developer est hover */
+main:has(#developer:hover) #background[b-Home] {
+    transform: scale(1.1);
+    transition: transform 0.5s, box-shadow 0.5s;
+    transform-origin: center center;
+    box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 25%);
+}
+
+/* Zoom de #background lorsque #screen3 est hover */
+main:has(#screen3:hover) #background[b-Home] {
+    transform: scale(1.1);
+    transition: transform 0.5s, box-shadow 0.5s;
+    transform-origin: right center;
+    box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 25%);
+}
+
+/* Zoom de #background lorsque #screen1 est hover */
+main:has(#screen1:hover) #background[b-Home] {
+    transform: scale(1.1);
+    transition: transform 0.5s, box-shadow 0.5s;
+    transform-origin: left center;
+    box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 25%);
+}
+
+footer[b-Home] {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+    footer > span[b-Home] {
+        background-color: rgba(23, 26, 43, 50%);
+        border-radius: 20px;
+        padding: 0 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 75%);
+        color: #D8DBD7;
+    }
+/* _content/JbmDev/Components/Pages/MyWork.razor.rz.scp.css */
+article[b-MyWork] {
+    display: flex;
+    flex-direction: column;
+}
+
+    article[b-MyWork] >  a {
+        margin-top: 1rem;
+        align-self: center;
+    }
+
+    article > p[b-MyWork] {
+        margin-block-end: 0;
+        text-indent: 50px;
+    }
+
+[b-MyWork] .btn-contact > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btn-contact svg[b-MyWork] {
+    color: var(--md-sys-color-primary);
+    margin-right: 0.5rem;
+}
+
+.btn-contact p[b-MyWork] {
+    color: var(--md-sys-color-primary);
+}
+
+@media (max-width: 768px) {
+    main[b-MyWork] {
+        padding: 0 5vw;
+    }
+}

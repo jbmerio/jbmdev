@@ -1,8 +1,0 @@
-<md-assist-chip @attributes="@CapturedAttributes">@ChildContent</md-assist-chip>
-
-@code{
-	[Parameter(CaptureUnmatchedValues = true)]
-	public IDictionary<string, object>? CapturedAttributes { get; set; }
-	[Parameter]
-	public RenderFragment? ChildContent { get; set; }
-}

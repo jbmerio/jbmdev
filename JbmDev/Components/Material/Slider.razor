@@ -1,8 +1,0 @@
-<md-slider @attributes="@CapturedAttributes">@ChildContent</md-slider>
-
-@code{
-	[Parameter(CaptureUnmatchedValues = true)]
-	public IDictionary<string, object>? CapturedAttributes { get; set; }
-	[Parameter]
-	public RenderFragment? ChildContent { get; set; }
-}

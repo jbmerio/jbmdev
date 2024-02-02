@@ -1,8 +1,0 @@
-<md-list @attributes="@CapturedAttributes">@ChildContent</md-list>
-
-@code{
-	[Parameter(CaptureUnmatchedValues = true)]
-	public IDictionary<string, object>? CapturedAttributes { get; set; }
-	[Parameter]
-	public RenderFragment? ChildContent { get; set; }
-}
