@@ -1,0 +1,8 @@
+<md-filled-tonal-icon-button @attributes="@CapturedAttributes">@ChildContent</md-filled-tonal-icon-button>
+
+@code{
+	[Parameter(CaptureUnmatchedValues = true)]
+	public IDictionary<string, object>? CapturedAttributes { get; set; }
+	[Parameter]
+	public RenderFragment? ChildContent { get; set; }
+}
