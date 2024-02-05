@@ -50,4 +50,14 @@
     main {
         padding: 0 5vw;
     }
+
+    .links {
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 425px) {
+    .links {
+        flex-direction: column !important;
+    }
 }

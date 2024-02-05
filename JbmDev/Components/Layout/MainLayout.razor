@@ -37,8 +37,8 @@
             _navMenu = this;
             _theme = await Js.InvokeAsync<string>("loadTheme") == "light" ? MainLayout.Themes.light : MainLayout.Themes.dark;
             _pageLoaded = "hide";
+            StateHasChanged();
         }
-        StateHasChanged();
         await base.OnAfterRenderAsync(firstRender);
     }
 

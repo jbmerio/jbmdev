@@ -31,7 +31,7 @@
 
 html {
     height: 100%;
-    background-color: var(--md-sys-color-surface-container);
+    background-color: var(--md-sys-color-surface-container) !important;
 }
 
 body {
@@ -40,6 +40,10 @@ body {
     padding: 0px;
     color: var(--md-sys-color-primary);
     background-color: var(--md-sys-color-surface-container);
+}
+
+#app {
+    height: 100vh;
 }
 
 .custom-tooltip {

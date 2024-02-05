@@ -45,11 +45,12 @@
         align-items: center;
     }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     main {
         padding: 0 5vw;
     }
 
-    .links {
+    article {
+        flex-direction: column;
     }
 }

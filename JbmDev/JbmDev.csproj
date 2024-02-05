@@ -1,71 +1,14 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
-	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
-		<Nullable>enable</Nullable>
-		<ImplicitUsings>enable</ImplicitUsings>
-	</PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
 
-	<ItemGroup>
-		<Folder Include="Components\Material\" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Update="Components/Layout/Header.razor.css" CssScope="b-Header" />
-		<None Update="Components/Layout/MainLayout.razor.css" CssScope="b-MainLayout" />
-		<None Update="Components/Layout/NavMenu.razor.css" CssScope="b-NavMenu" />
-		<None Update="Components/Material/AssistChip.razor.css" CssScope="b-AssistChip" />
-		<None Update="Components/Material/BrandedFab.razor.css" CssScope="b-BrandedFab" />
-		<None Update="Components/Material/Checkbox.razor.css" CssScope="b-Checkbox" />
-		<None Update="Components/Material/CircularProgress.razor.css" CssScope="b-CircularProgress" />
-		<None Update="Components/Material/Dialog.razor.css" CssScope="b-Dialog" />
-		<None Update="Components/Material/Divider.razor.css" CssScope="b-Divider" />
-		<None Update="Components/Material/ElevatedButton.razor.css" CssScope="b-ElevatedButton" />
-		<None Update="Components/Material/Elevation.razor.css" CssScope="b-Elevation" />
-		<None Update="Components/Material/Fab.razor.css" CssScope="b-Fab" />
-		<None Update="Components/Material/FilledButton.razor.css" CssScope="b-FilledButton" />
-		<None Update="Components/Material/FilledField.razor.css" CssScope="b-FilledField" />
-		<None Update="Components/Material/FilledIconButton.razor.css" CssScope="b-FilledIconButton" />
-		<None Update="Components/Material/FilledSelect.razor.css" CssScope="b-FilledSelect" />
-		<None Update="Components/Material/FilledTextField.razor.css" CssScope="b-FilledTextField" />
-		<None Update="Components/Material/FilledTonalButton.razor.css" CssScope="b-FilledTonalButton" />
-		<None Update="Components/Material/FilledTonalIconButton.razor.css" CssScope="b-FilledTonalIconButton" />
-		<None Update="Components/Material/FilterChip.razor.css" CssScope="b-FilterChip" />
-		<None Update="Components/Material/Icon.razor.css" CssScope="b-Icon" />
-		<None Update="Components/Material/IconButton.razor.css" CssScope="b-IconButton" />
-		<None Update="Components/Material/InputChip.razor.css" CssScope="b-InputChip" />
-		<None Update="Components/Material/LinearProgress.razor.css" CssScope="b-LinearProgress" />
-		<None Update="Components/Material/List.razor.css" CssScope="b-List" />
-		<None Update="Components/Material/ListItem.razor.css" CssScope="b-ListItem" />
-		<None Update="Components/Material/MdFocusRing.razor.css" CssScope="b-MdFocusRing" />
-		<None Update="Components/Material/Menu.razor.css" CssScope="b-Menu" />
-		<None Update="Components/Material/MenuItem.razor.css" CssScope="b-MenuItem" />
-		<None Update="Components/Material/OutlinedButton.razor.css" CssScope="b-OutlinedButton" />
-		<None Update="Components/Material/OutlinedField.razor.css" CssScope="b-OutlinedField" />
-		<None Update="Components/Material/OutlinedIconButton.razor.css" CssScope="b-OutlinedIconButton" />
-		<None Update="Components/Material/OutlinedSelect.razor.css" CssScope="b-OutlinedSelect" />
-		<None Update="Components/Material/OutlinedTextField.razor.css" CssScope="b-OutlinedTextField" />
-		<None Update="Components/Material/PrimaryTab.razor.css" CssScope="b-PrimaryTab" />
-		<None Update="Components/Material/Radio.razor.css" CssScope="b-Radio" />
-		<None Update="Components/Material/Ripple.razor.css" CssScope="b-Ripple" />
-		<None Update="Components/Material/SecondaryTab.razor.css" CssScope="b-SecondaryTab" />
-		<None Update="Components/Material/SelectOption.razor.css" CssScope="b-SelectOption" />
-		<None Update="Components/Material/Slider.razor.css" CssScope="b-Slider" />
-		<None Update="Components/Material/SubMenu.razor.css" CssScope="b-SubMenu" />
-		<None Update="Components/Material/SuggestionChip.razor.css" CssScope="b-SuggestionChip" />
-		<None Update="Components/Material/Switch.razor.css" CssScope="b-Switch" />
-		<None Update="Components/Material/Tabs.razor.css" CssScope="b-Tabs" />
-		<None Update="Components/Material/TextButton.razor.css" CssScope="b-TextButton" />
-		<None Update="Components/Pages/AboutMe.razor.css" CssScope="b-AboutMe" />
-		<None Update="Components/Pages/Contact.razor.css" CssScope="b-Contact" />
-		<None Update="Components/Pages/Error.razor.css" CssScope="b-Error" />
-		<None Update="Components/Pages/Home.razor.css" CssScope="b-Home" />
-		<None Update="Components/Pages/MyWork.razor.css" CssScope="b-MyWork" />
-		<None Update="Components/App.razor.css" CssScope="b-App" />
-		<None Update="Components/Routes.razor.css" CssScope="b-Routes" />
-		<None Update="Components\Pages\Contact.razor.css">
-		  <CssScope>b-MyWork</CssScope>
-		</None>
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0" PrivateAssets="all" />
+  </ItemGroup>
 
 </Project>
